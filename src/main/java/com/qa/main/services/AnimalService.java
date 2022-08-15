@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.qa.main.domain.Animal;
+import com.qa.main.exceptions.AnimalNotFoundException;
 import com.qa.main.repos.AnimalRepo;
 
 @Service
@@ -28,7 +29,7 @@ public class AnimalService {
 
     public Animal getByID(long id) {
 
-        return repo.findById(id).get();
+        return repo.findById(id).orElseThrow(AnimalNotFoundException::new);
     }
 
     public Animal updateAnimal(long id, Animal animal) {
