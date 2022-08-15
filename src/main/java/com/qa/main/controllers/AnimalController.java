@@ -1,6 +1,5 @@
 package com.qa.main.controllers;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,45 +12,47 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.qa.main.domain.Animal;
+import com.qa.main.services.AnimalService;
 
 @RestController
 @RequestMapping("/animal")
 public class AnimalController {
     
-    private List<Animal> animals = new ArrayList<>();
+    private AnimalService service;
+
+    public AnimalController(AnimalService service) {
+        this.service = service;
+    }
 
 
     @PostMapping("/create")
     public Animal create(@RequestBody Animal animal) {
-        animals.add(animal);
 
-        return animals.get(animals.size() - 1);
+        return service.create(animal);
     }
 
     @GetMapping("/getAll")
     public List<Animal> getAll() {
 
-        return animals;
+        return service.getAll();
     }
 
     @GetMapping("/getByID/{id}")
-    public Animal getByID(@PathVariable int id) {
+    public Animal getByID(@PathVariable long id) {
 
-        return animals.get(id);
+        return service.getByID(id);
     }
 
     @PutMapping("/update/{id}")
-    public Animal updateAnimal(@PathVariable int id, @RequestBody Animal animal) {
-        animals.remove(id);
-        animals.add(id, animal);
+    public Animal updateAnimal(@PathVariable long id, @RequestBody Animal animal) {
 
-        return animals.get(id);
+        return service.updateAnimal(id, animal);
     }
     
     @DeleteMapping("/delete/{id}")
-    public Animal removeAnimal(@PathVariable int id) {
+    public Boolean removeAnimal(@PathVariable long id) {
 
-        return animals.remove(id);
+        return service.removeAnimal(id);
     }
 
 
