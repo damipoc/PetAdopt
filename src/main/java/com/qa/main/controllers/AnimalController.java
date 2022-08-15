@@ -2,6 +2,8 @@ package com.qa.main.controllers;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,33 +28,33 @@ public class AnimalController {
 
 
     @PostMapping("/create")
-    public Animal create(@RequestBody Animal animal) {
+    public ResponseEntity<Animal> create(@RequestBody Animal animal) {
 
-        return service.create(animal);
+        return new ResponseEntity<Animal>(service.create(animal), HttpStatus.CREATED);
     }
 
     @GetMapping("/getAll")
-    public List<Animal> getAll() {
+    public ResponseEntity<List<Animal>> getAll() {
 
-        return service.getAll();
+        return new ResponseEntity<List<Animal>>(service.getAll(), HttpStatus.OK);
     }
 
     @GetMapping("/getByID/{id}")
-    public Animal getByID(@PathVariable long id) {
+    public ResponseEntity<Animal> getByID(@PathVariable long id) {
 
-        return service.getByID(id);
+        return new ResponseEntity<Animal>(service.getByID(id), HttpStatus.OK);
     }
 
     @PutMapping("/update/{id}")
-    public Animal updateAnimal(@PathVariable long id, @RequestBody Animal animal) {
+    public ResponseEntity<Animal> updateAnimal(@PathVariable long id, @RequestBody Animal animal) {
 
-        return service.updateAnimal(id, animal);
+        return new ResponseEntity<Animal>(service.updateAnimal(id, animal), HttpStatus.ACCEPTED);
     }
     
     @DeleteMapping("/delete/{id}")
-    public Boolean removeAnimal(@PathVariable long id) {
+    public ResponseEntity<Boolean> removeAnimal(@PathVariable long id) {
 
-        return service.removeAnimal(id);
+        return new ResponseEntity<Boolean>(service.removeAnimal(id), HttpStatus.NO_CONTENT);
     }
 
 
