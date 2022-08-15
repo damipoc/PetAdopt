@@ -57,6 +57,12 @@ public class AnimalController {
         return new ResponseEntity<Boolean>(service.removeAnimal(id), HttpStatus.NO_CONTENT);
     }
 
+    @GetMapping("/getByType/{type}")
+    public List<Animal> findByType(@PathVariable String type) {
+
+        return service.findByType(type);
+    }
+
 
 
 }

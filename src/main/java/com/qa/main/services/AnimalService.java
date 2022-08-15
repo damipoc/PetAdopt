@@ -49,4 +49,13 @@ public class AnimalService {
         return !repo.existsById(id);
     }
 
+    public List<Animal> findByType(String type){
+        return repo.findAnimalByType(type);
+    }
+
+    public List<Animal> findByNotes() {
+
+        return repo.findAnimalByNotesIsNotNull();
+    }
+
 }
