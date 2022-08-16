@@ -12,11 +12,31 @@
     </head>
 
     <body onload="getAll()">
+        <!-- Body Starts Here -->
+        <body id="body" style="overflow:hidden;">
+            <div id="abc">
+            <!-- Popup Div Starts Here -->
+                <div id="popupContact">
+                    <!-- Contact Us Form -->
+                    <form id="formPopup" method="post" name="form">
+                        <img id="close" src="imgs/3.png" alt="Close" width="30" height="30" onclick ="div_hide()">
+                        <h2>Update Animal</h2>
+                        <hr>
+                        <input id="typeUpdate" placeholder="Type of Animal" type="text">
+                        <input id="nameUpdate" placeholder="Name of Animal" type="text">
+                        <input id="ageUpdate" placeholder="Age of Animal" type="number">
+                        <textarea id="notesUpdate" placeholder="Any notes"></textarea>
+                    </form>
+                </div>
+                <!-- Popup Div Ends Here -->
+            </div>
+        </body>
+    <!-- Body Ends Here -->
 
         <nav class="navbar bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand">
-                    <img src="./imgs/logo.png" alt="" width="80" height="60" class="d-inline-block">
+                    <img src="./imgs/logo.png" alt="Logo" width="80" height="60" class="d-inline-block">
                     Adoption Center
                 </a>
             </div>
