@@ -1,0 +1,24 @@
+#form-div {
+    display: inline-grid;
+    width: 25%;
+    margin-left: 2%;
+    padding: 10px;
+}
+
+#results-div {
+    display: inline-grid;
+    width: 60%;
+    margin-left: 2%;
+}
+
+.entry-div {
+    border: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 4px;
+    width:50%;
+    text-align: center;
+    color: white;
+    background-color: rgb(25, 25, 29);
+} 
