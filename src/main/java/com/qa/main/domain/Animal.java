@@ -87,7 +87,6 @@ public class Animal {
         final int prime = 31;
         int result = 1;
         result = prime * result + age;
-        result = prime * result + (int) (id ^ (id >>> 32));
         result = prime * result + ((name == null) ? 0 : name.hashCode());
         result = prime * result + ((notes == null) ? 0 : notes.hashCode());
         result = prime * result + ((type == null) ? 0 : type.hashCode());
@@ -104,8 +103,6 @@ public class Animal {
             return false;
         Animal other = (Animal) obj;
         if (age != other.age)
-            return false;
-        if (id != other.id)
             return false;
         if (name == null) {
             if (other.name != null)

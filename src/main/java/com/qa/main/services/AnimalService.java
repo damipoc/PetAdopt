@@ -33,7 +33,7 @@ public class AnimalService {
     }
 
     public Animal updateAnimal(long id, Animal animal) {
-        Animal existing = repo.findById(id).get();
+        Animal existing = repo.findById(id).orElseThrow(AnimalNotFoundException::new);
 
         existing.setType(animal.getType());
         existing.setName(animal.getName());
@@ -52,11 +52,6 @@ public class AnimalService {
 
     public List<Animal> findByType(String type){
         return repo.findAnimalByType(type);
-    }
-
-    public List<Animal> findByNotes() {
-
-        return repo.findAnimalByNotesIsNotNull();
     }
 
 }
