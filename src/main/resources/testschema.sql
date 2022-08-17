@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS `animal`;
+
+CREATE TABLE `animal`(
+    `id` BIGINT NOT NULL AUTO_INCREMENT,
+    `type` VARCHAR(255) NOT NULL,
+    `name` VARCHAR(255) NOT NULL,
+    `age` INT NOT NULL,
+    `notes` VARCHAR(255) NOT NULL,
+    PRIMARY KEY (`id`)
+)

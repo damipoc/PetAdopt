@@ -9,7 +9,7 @@ let resultsDiv = document.querySelector("#results-div");
 let formPopup = document.querySelector("#formPopup");
 
 //Inputs
-let typeInput = document.querySelector("#ageInput");
+let typeInput = document.querySelector("#typeInput");
 let nameInput = document.querySelector("#nameInput");
 let ageInput = document.querySelector("#ageInput");
 let notesInput = document.querySelector("#notesInput");

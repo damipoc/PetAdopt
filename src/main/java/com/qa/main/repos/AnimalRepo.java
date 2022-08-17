@@ -12,6 +12,4 @@ public interface AnimalRepo extends JpaRepository<Animal, Long>{
 
     List<Animal> findAnimalByType(String type);
 
-    List<Animal> findAnimalByNotesIsNotNull();
-    
 }
