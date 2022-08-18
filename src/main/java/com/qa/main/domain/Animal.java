@@ -42,42 +42,72 @@ public class Animal {
         this.notes = notes;
     }
 
+    /**
+     * @return long ID of the animal
+     */
     public long getId() {
         return id;
     }
 
+    /**
+     * @param id of the animal
+     */
     public void setId(long id) {
         this.id = id;
     }
 
+    /**
+     * @return String of the animal's type
+     */
     public String getType() {
         return type;
     }
 
+    /**
+     * @param type of the animal
+     */
     public void setType(String type) {
         this.type = type;
     }
 
+    /**
+     * @return String of the animal's name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @param name of the animal
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * @return int age of the animal
+     */
     public int getAge() {
         return age;
     }
 
+    /**
+     * @param age of the animal in Int
+     */
     public void setAge(int age) {
         this.age = age;
     }
 
+    /**
+     * @return String of any notes about the animal
+     */
     public String getNotes() {
         return notes;
     }
 
+    /**
+     * @param notes of the animal
+     */
     public void setNotes(String notes) {
         this.notes = notes;
     }
@@ -121,5 +151,5 @@ public class Animal {
             return false;
         return true;
     }
-    
+
 }

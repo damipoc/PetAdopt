@@ -52,7 +52,6 @@ public class AnimalControllerUnitTest {
 
     }
 
-
     @Test
     public void readAllTest() throws Exception {
 
@@ -106,7 +105,6 @@ public class AnimalControllerUnitTest {
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isNoContent());
 
-
     }
 
     @Test
@@ -123,5 +121,5 @@ public class AnimalControllerUnitTest {
                 .andExpect(content().json(resultAsJSON));
 
     }
-    
+
 }
