@@ -1,0 +1,132 @@
+#form-div {
+    display: inline-grid;
+    width: 25%;
+    margin-top: 25px;
+    margin-left: 2%;
+    padding: 10px;
+    background-color: #91ffff;
+    border-radius: 20px;
+}
+
+#results-div {
+    position: absolute;
+    display: inline-grid;
+    width: 60%;
+    margin-left: 2%;
+    margin-top: 25px;
+    background-color: #91ffff;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 20px;
+}
+
+.entry-div {
+    border: solid #08a4a7;
+    border-width: 2px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 4px;
+    width: 50%;
+    text-align: center;
+    color: white;
+    background-color: #08a4a7;
+}
+
+#createBtn {
+    margin-left: 40%;
+}
+
+nav {
+    background-color: #91ffff;
+}
+
+#divInfo {
+    float: left;
+    margin-top: 7px;
+    margin-left: 6px;
+    width: 75%;
+}
+
+#button-div {
+    display: inline;
+    float: right;
+    margin: 5px;
+}
+
+#updateBtn {
+    margin-right: 5px;
+}
+
+body {
+    background-color: #08a4a7;
+}
+
+.mb-3 {
+    padding-left: 60px;
+}
+
+#abc {
+    width: 100%;
+    height: 100%;
+    opacity: .95;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    background-color: #313131;
+    overflow: auto
+}
+
+img#close {
+    position: absolute;
+    right: -14px;
+    top: -14px;
+    cursor: pointer
+}
+
+div#popupContact {
+    position: absolute;
+    left: 50%;
+    top: 17%;
+    margin-left: -202px;
+    font-family: 'Raleway', sans-serif
+}
+
+form#formPopup {
+    max-width: 300px;
+    min-width: 250px;
+    padding: 10px 50px;
+    border-radius: 10px;
+    background-color: #08a4a7
+}
+
+#typeUpdate {
+    margin: 5px;
+}
+
+#nameUpdate {
+    margin: 5px;
+}
+
+#ageUpdate {
+    margin: 5px;
+}
+
+#notesUpdate {
+    margin: 5px;
+}
+
+#temp {
+    margin-left: 65px;
+}
+
+#updateTitle {
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px
+}
