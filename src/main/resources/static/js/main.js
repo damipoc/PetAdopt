@@ -28,8 +28,12 @@ let printResults = (result) => {
     let entryDiv = document.createElement("div");
     let updateBtn = document.createElement("button");
     let deleteBtn = document.createElement("button");
+    let buttonDiv = document.createElement("div");
+    let info = document.createElement("div");
 
+    info.setAttribute("id", "divInfo");
     entryDiv.setAttribute("class", "entry-div");
+    buttonDiv.setAttribute("id", "button-div");
 
     updateBtn.setAttribute("class", "btn btn-warning btn-sm");
     updateBtn.setAttribute("id", "updateBtn");
@@ -40,12 +44,14 @@ let printResults = (result) => {
     deleteBtn.setAttribute("id", "deleteBtn");
     deleteBtn.setAttribute("onClick", `deleteEntry(${result.id})`);
 
-    entryDiv.textContent = `${result.id} | ${result.type} | ${result.name} | ${result.age} | ${result.notes}`;
+    info.textContent = `${result.id} | ${result.type} | ${result.name} | ${result.age} | ${result.notes}`;
     updateBtn.textContent = "Update";
     deleteBtn.textContent = "Delete";
 
-    entryDiv.appendChild(updateBtn);
-    entryDiv.appendChild(deleteBtn);
+    buttonDiv.appendChild(updateBtn);
+    buttonDiv.appendChild(deleteBtn);
+    entryDiv.appendChild(info);
+    entryDiv.appendChild(buttonDiv);
     resultsDiv.appendChild(entryDiv);
 }
 
@@ -87,10 +93,25 @@ let formUpdate = (id) => {
     confirmBtn.setAttribute("class", "btn btn-warning btn-sm");
     confirmBtn.setAttribute("id", "temp");
     confirmBtn.setAttribute("onClick", `confirmUpdate(${id})`);
+    formUpdatePopulate(id);
 
     confirmBtn.textContent = "Confirm";
     formPopup.appendChild(confirmBtn);
 
+}
+
+let formUpdatePopulate = (id) => {
+    axios.get(`http://localhost:8080/animal/getByID/${id}`)
+        .then((res) => {
+            let results = res.data;
+
+            typeUpdate.value = results.type;
+            nameUpdate.value = results.name;
+            ageUpdate.value = results.age;
+            notesUpdate.value = results.notes;
+
+
+        }).catch((err) => { console.log(err); });
 }
 
 let confirmUpdate = (id) => {

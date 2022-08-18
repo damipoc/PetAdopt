@@ -12,29 +12,9 @@
     </head>
 
     <body onload="getAll()">
-        <!-- Body Starts Here -->
-        <body id="body" style="overflow:hidden;">
-            <div id="abc">
-            <!-- Popup Div Starts Here -->
-                <div id="popupContact">
-                    <!-- Contact Us Form -->
-                    <form id="formPopup" method="post" name="form">
-                        <img id="close" src="imgs/3.png" alt="Close" width="30" height="30" onclick ="div_hide()">
-                        <h2>Update Animal</h2>
-                        <hr>
-                        <input id="typeUpdate" placeholder="Type of Animal" type="text">
-                        <input id="nameUpdate" placeholder="Name of Animal" type="text">
-                        <input id="ageUpdate" placeholder="Age of Animal" type="number">
-                        <textarea id="notesUpdate" placeholder="Any notes"></textarea>
-                    </form>
-                </div>
-                <!-- Popup Div Ends Here -->
-            </div>
-        </body>
-    <!-- Body Ends Here -->
 
-        <nav class="navbar bg-light">
-            <div class="container-fluid">
+        <nav class="navbar bg-light" style="padding: 0px">
+            <div class="container-fluid" style="background-color: #91ffff">
                 <a class="navbar-brand">
                     <img src="./imgs/logo.png" alt="Logo" width="80" height="60" class="d-inline-block">
                     Adoption Center
@@ -73,6 +53,29 @@
 
 
         </div>
+        <!-- Body Starts Here -->
+        <body id="body" style="overflow:hidden;">
+            <div id="abc">
+            <!-- Popup Div Starts Here -->
+                <div id="popupContact">
+                    <!-- Contact Us Form -->
+                    <form id="formPopup" method="post" name="form">
+                        <img id="close" src="imgs/3.png" alt="Close" width="30" height="30" onclick ="div_hide()">
+                        <h3 id="updateTitle">Update Animal</h3>
+                        <hr>
+                        <input id="typeUpdate" placeholder="Type of Animal" type="text" class="form-control">
+                        <input id="nameUpdate" placeholder="Name of Animal" type="text" class="form-control">
+                        <input id="ageUpdate" placeholder="Age of Animal" type="number" class="form-control">
+                        <textarea id="notesUpdate" placeholder="Any notes" class="form-control"></textarea>
+                    </form>
+                </div>
+                <!-- Popup Div Ends Here -->
+            </div>
+        </body>
+        <footer>
+            <p>Made by: Damian Poclitar</p>
+        </footer>
+        <!-- Body Ends Here -->
 
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
@@ -81,4 +84,5 @@
 
         <script src="./js/main.js"></script>
     </body>
+    
 </html>
