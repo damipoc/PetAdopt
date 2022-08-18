@@ -25,20 +25,19 @@ import com.qa.main.domain.Animal;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-@Sql(scripts = {"classpath:testschema.sql", "classpath:testdata.sql"}, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+@Sql(scripts = { "classpath:testschema.sql",
+        "classpath:testdata.sql" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 @ActiveProfiles("test")
 public class AnimalControllerIntegrationTest {
-    
-    
+
     @Autowired
     private MockMvc mvc;
 
     @Autowired
     private ObjectMapper mapper;
 
-
     @Test
-    public void createTest() throws Exception{
+    public void createTest() throws Exception {
 
         Animal entry = new Animal("Cat", "Cat name", 1, "Cat notes");
         String entryAsJSON = mapper.writeValueAsString(entry);
@@ -54,7 +53,7 @@ public class AnimalControllerIntegrationTest {
     }
 
     @Test
-    public void readAllTest() throws Exception{
+    public void readAllTest() throws Exception {
 
         List<Animal> result = new ArrayList<>();
         result.add(new Animal(1L, "Dog", "Rex", 5, "Yellow Labrador Retriever"));
@@ -67,7 +66,7 @@ public class AnimalControllerIntegrationTest {
     }
 
     @Test
-    public void readByIDTest() throws Exception{
+    public void readByIDTest() throws Exception {
 
         Animal result = new Animal(1L, "Dog", "Rex", 5, "Yellow Labrador Retriever");
         String resultAsJSON = mapper.writeValueAsString(result);
@@ -97,9 +96,7 @@ public class AnimalControllerIntegrationTest {
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isNoContent());
 
-
     }
-
 
     @Test
     public void getByTypeTest() throws Exception {
@@ -112,9 +109,6 @@ public class AnimalControllerIntegrationTest {
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(content().json(resultAsJSON));
 
-
     }
-
-
 
 }

@@ -17,10 +17,9 @@ import com.qa.main.repos.AnimalRepo;
 
 @SpringBootTest
 public class AnimalServiceUnitTest {
-    
+
     @Autowired
     private AnimalService service;
-
 
     @MockBean
     private AnimalRepo repo;
@@ -30,7 +29,7 @@ public class AnimalServiceUnitTest {
 
         Animal entry = new Animal("Type", "Name", 1, "Notes");
 
-        Animal result = new Animal (2L, "Type", "Name", 1, "Notes");
+        Animal result = new Animal(2L, "Type", "Name", 1, "Notes");
 
         Mockito.when(repo.saveAndFlush(entry)).thenReturn(result);
 
@@ -88,8 +87,6 @@ public class AnimalServiceUnitTest {
 
         assertEquals(result, service.findByType("Dog"));
 
-
     }
-
 
 }

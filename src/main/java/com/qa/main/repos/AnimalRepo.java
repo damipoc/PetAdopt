@@ -8,8 +8,9 @@ import org.springframework.stereotype.Repository;
 import com.qa.main.domain.Animal;
 
 @Repository
-public interface AnimalRepo extends JpaRepository<Animal, Long>{
+public interface AnimalRepo extends JpaRepository<Animal, Long> {
 
+    // Find list of animals by given type
     List<Animal> findAnimalByType(String type);
 
 }
