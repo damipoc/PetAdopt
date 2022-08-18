@@ -28,7 +28,7 @@ What things you need to install the software and how to install them
 
 A step by step series of examples that tell you how to get a development env running
 
-To build a version of this project, you must first git clone this repo and enter the folder. After that open cmd and type ````java -jar petadopt-0.0.1-SNAPSHOT.jar```
+To build a version of this project, you must first git clone this repo and enter the folder. After that open cmd and type ````java -jar petadopt-0.0.1-SNAPSHOT.jar````
 
 ## Running the tests
 
