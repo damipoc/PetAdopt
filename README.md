@@ -68,8 +68,6 @@ Mockito is used for tests that require inputs.
 
 This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md) file for details 
 
-*For help in [Choosing a license](https://choosealicense.com/)*
-
 ## Acknowledgments
 
 * Thank you to Anoosh for in depth teaching of the different tools and languages used in the project.
