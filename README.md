@@ -70,5 +70,5 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Thank you to Anoosh for in depth teaching of the different tools and languages used in the project.
+* Thank you to Anoush for in depth teaching of the different tools and languages used in the project.
 * Stackoverflow is still a life saver.
