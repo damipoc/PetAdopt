@@ -20,7 +20,7 @@ What things you need to install the software and how to install them
 
 [Maven](https://maven.apache.org/download.cgi)
 
-[Spring Boot] (https://spring.io/tools)
+[Spring Boot](https://spring.io/tools)
 
 
 
